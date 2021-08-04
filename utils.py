@@ -1,10 +1,20 @@
-def connect_postgres():
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--pguser")
+parser.add_argument("--pgpass")
+parser.add_argument("--host")
+parser.add_argument("--port")
+parser.add_argument("--db")
+
+
+def connect_postgres(username, user_password, host_adress, user_port, user_db):
     try:
-        connection = psycopg2.connect(user="sysadmin",
-                                      password="pynative@#29",
-                                      host="127.0.0.1",
-                                      port="5432",
-                                      database="postgres_db")
+        connection = psycopg2.connect(user=username,
+                                      password=user_password,
+                                      host=host_adress,
+                                      port=user_port,
+                                      database=user_db)
 
         cursor = connection.cursor()
         # Print PostgreSQL Connection properties
