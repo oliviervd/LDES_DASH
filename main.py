@@ -7,8 +7,6 @@ import plotly.graph_objs as go
 import psycopg2
 import pandas.io.sql as sqlio
 
-from utils.utils import connect_sql, sql_to_pd
-
 from config import *
 
 #connect to db
