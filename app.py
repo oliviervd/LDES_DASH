@@ -7,6 +7,7 @@ import pandas as pd
 app = dash.Dash(__name__)
 
 app.layout = html.Div(children=[
+    html.Img(src='/assets/logo.jpg'),
     html.H1(children="CoGhent: Dashboard", className="app-header--title")
 ])
 
