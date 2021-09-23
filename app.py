@@ -7,7 +7,7 @@ import pandas as pd
 app = dash.Dash(__name__)
 
 app.layout = html.Div(children=[
-    html.H1(children="CoGhent: Dashboard")
+    html.H1(children="CoGhent: Dashboard", className="app-header--title")
 ])
 
 if __name__ == '__main__':
